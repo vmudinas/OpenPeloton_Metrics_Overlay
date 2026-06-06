@@ -4,15 +4,7 @@ A standalone Android application for displaying and recording live Peloton
 Tread speed, incline, distance, and elapsed time over other applications such
 as Netflix.
 
-This directory can be copied into a new repository without the original
-OpenPelo Flutter project.
-
-## Independence From OpenPelo
-
-The app has **no build-time or runtime dependency on OpenPelo**, Flutter, or
-the original desktop application.
-
-It is a normal native Android Gradle project containing:
+## Android Gradle project containing:
 
 - Kotlin Android source code.
 - A Gradle wrapper.
@@ -187,16 +179,6 @@ run:
 ```
 
 The report is written under `diagnostics/`.
-
-## GitHub Build
-
-When this directory becomes the root of a new GitHub repository, the included
-workflow builds and tests the debug APK and publishes it as a workflow
-artifact:
-
-```text
-.github/workflows/build-apk.yml
-```
 
 ## Current Limitations
 
