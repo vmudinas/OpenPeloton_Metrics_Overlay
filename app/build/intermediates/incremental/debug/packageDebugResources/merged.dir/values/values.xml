@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="speed_units">
+        <item>Peloton speed unit is mph</item>
+        <item>Peloton speed unit is km/h</item>
+        <item>Peloton speed unit is m/s</item>
+    </string-array>
+    <string name="app_name">Vitas Tread Metrics</string>
+    <string name="diagnostics_placeholder">Data source: Peloton Affernet\nReal metric samples: 0\nWaiting for Peloton data.</string>
+    <string name="export_csv">Export All Sessions As CSV</string>
+    <string name="fake_mode">Use simulated metrics (testing)</string>
+    <string name="grant_overlay_permission">Grant Draw-Over-Apps Permission</string>
+    <string name="metrics_placeholder">Speed: --\nIncline: --\nDistance: --\nTime: --</string>
+    <string name="pause">Pause / Resume</string>
+    <string name="raw_events">Latest Raw Broadcast Extras</string>
+    <string name="recent_sessions">Recent Saved Sessions</string>
+    <string name="show_hide_overlay">Show / Hide Overlay</string>
+    <string name="start">Start</string>
+    <string name="status_idle">Idle. Grant overlay permission, then start tracking.</string>
+    <string name="stop_save">Stop + Save</string>
+    <style name="Theme.BeltStatusDump" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0F4C5C</item>
+        <item name="colorPrimaryVariant">#0B3944</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#E36414</item>
+        <item name="colorSecondaryVariant">#C7530D</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:statusBarColor" ns1:targetApi="l">#0B3944</item>
+    </style>
+</resources>

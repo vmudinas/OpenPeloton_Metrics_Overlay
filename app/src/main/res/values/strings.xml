@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Vitas Tread Metrics</string>
+    <string name="status_idle">Idle. Grant overlay permission, then start tracking.</string>
+    <string name="metrics_placeholder">Speed: --\nIncline: --\nDistance: --\nTime: --</string>
+    <string name="grant_overlay_permission">Grant Draw-Over-Apps Permission</string>
+    <string name="fake_mode">Use simulated metrics (testing)</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause / Resume</string>
+    <string name="stop_save">Stop + Save</string>
+    <string name="show_hide_overlay">Show / Hide Overlay</string>
+    <string name="diagnostics_placeholder">Data source: Peloton Affernet\nReal metric samples: 0\nWaiting for Peloton data.</string>
+    <string name="export_csv">Export All Sessions As CSV</string>
+    <string name="recent_sessions">Recent Saved Sessions</string>
+    <string name="raw_events">Latest Raw Broadcast Extras</string>
+    <string-array name="speed_units">
+        <item>Peloton speed unit is mph</item>
+        <item>Peloton speed unit is km/h</item>
+        <item>Peloton speed unit is m/s</item>
+    </string-array>
+</resources>

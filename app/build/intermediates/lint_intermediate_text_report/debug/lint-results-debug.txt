@@ -1,0 +1,117 @@
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/build.gradle.kts:40: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.19.0 [GradleDependency]
+    implementation("androidx.core:core-ktx:1.12.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/build.gradle.kts:41: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation("androidx.appcompat:appcompat:1.6.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/build.gradle.kts:42: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.14.0 [GradleDependency]
+    implementation("com.google.android.material:material:1.11.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/build.gradle.kts:43: Warning: A newer version of androidx.activity:activity-ktx than 1.8.2 is available: 1.13.0 [GradleDependency]
+    implementation("androidx.activity:activity-ktx:1.8.2")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/build.gradle.kts:44: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/res/values/themes.xml:10: Warning: Unnecessary; SDK_INT is always >= 21 [ObsoleteSdkInt]
+        <item name="android:statusBarColor" tools:targetApi="l">#0B3944</item>
+                                            ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/res/values/strings.xml:4: Warning: Replace "--" with an "em dash" character (—, &#8212;) ? [TypographyDashes]
+    <string name="metrics_placeholder">Speed: --\nIncline: --\nDistance: --\nTime: --</string>
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "TypographyDashes":
+   The "n dash" (u2013, &#8211;) and the "m dash" (u2014, &#8212;) characters
+   are used for ranges (n dash) and breaks (m dash). Using these instead of
+   plain hyphens can make text easier to read and your application will look
+   more polished.
+
+   https://en.wikipedia.org/wiki/Dash
+
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/AndroidManifest.xml:9: Warning: Should explicitly set android:icon, there is no default [MissingApplicationIcon]
+    <application
+     ~~~~~~~~~~~
+
+   Explanation for issues of type "MissingApplicationIcon":
+   You should set an icon for the application as whole because there is no
+   default. This attribute must be set as a reference to a drawable resource
+   containing the image (for example @drawable/icon).
+
+   https://developer.android.com/studio/publish/preparing#publishing-configure
+
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/res/layout/activity_main.xml:65: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+            <Button
+             ~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/res/layout/activity_main.xml:72: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+            <Button
+             ~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/res/layout/activity_main.xml:79: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+            <Button
+             ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://d.android.com/r/studio-ui/designer/material/dialogs
+
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/java/org/openpelo/beltstatusdump/OverlayController.kt:190: Warning: Custom view `LinearLayout` has setOnTouchListener called on it but does not override performClick [ClickableViewAccessibility]
+        container.setOnTouchListener { _, event ->
+        ^
+
+   Explanation for issues of type "ClickableViewAccessibility":
+   If a View that overrides onTouchEvent or uses an OnTouchListener does not
+   also implement performClick and call it when clicks are detected, the View
+   may not handle accessibility actions properly. Logic handling the click
+   actions should ideally be placed in View#performClick as some accessibility
+   services invoke performClick when a click action should occur.
+
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/java/org/openpelo/beltstatusdump/MainActivity.kt:39: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                statusText.text = "CSV exported."
+                                   ~~~~~~~~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/java/org/openpelo/beltstatusdump/MainActivity.kt:135: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            statusText.text = "Draw-over-apps permission is already granted."
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/java/org/openpelo/beltstatusdump/MainActivity.kt:154: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            statusText.text = "Ready. Draw-over-apps permission is granted."
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/java/org/openpelo/beltstatusdump/MainActivity.kt:203: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            logText.text = ("$rawDump\n${"-".repeat(32)}\n$existing").take(MAX_LOG_CHARS)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mini/Dev/Repos/Openpeloton_with_belt_status/peloton-tread-overlay/app/src/main/java/org/openpelo/beltstatusdump/MainActivity.kt:233: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                    ("$rawDump\n${"-".repeat(32)}\n$existing").take(MAX_LOG_CHARS)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 17 warnings

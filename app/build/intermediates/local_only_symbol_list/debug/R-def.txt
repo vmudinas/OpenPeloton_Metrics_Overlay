@@ -1,0 +1,31 @@
+R_DEF: Internal format may change without notice
+local
+array speed_units
+id diagnosticsText
+id exportButton
+id fakeModeSwitch
+id logText
+id metricsText
+id overlayPermissionButton
+id pauseButton
+id sessionsText
+id speedUnitSpinner
+id startButton
+id statusText
+id stopButton
+id toggleOverlayButton
+layout activity_main
+string app_name
+string diagnostics_placeholder
+string export_csv
+string fake_mode
+string grant_overlay_permission
+string metrics_placeholder
+string pause
+string raw_events
+string recent_sessions
+string show_hide_overlay
+string start
+string status_idle
+string stop_save
+style Theme.BeltStatusDump

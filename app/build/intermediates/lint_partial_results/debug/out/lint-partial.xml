@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.2" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="org.openpelo.beltstatusdump.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="android.settings.action.MANAGE_OVERLAY_PERMISSION (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/org/openpelo/beltstatusdump/MainActivity.kt"
+                            line="139"
+                            column="13"
+                            startOffset="5178"
+                            endLine="142"
+                            endColumn="14"
+                            endOffset="5309"/>
+                    </map>
+            </map>
+            <map id="actionsRegisteredNonExported">
+                <entry
+                    name="org.openpelo.beltstatusdump.action.DIAGNOSTICS_UPDATE (used to send a broadcast)"
+                    boolean="true"/>
+                <entry
+                    name="org.openpelo.beltstatusdump.action.METRICS_UPDATE (used to send a broadcast)"
+                    boolean="true"/>
+                <entry
+                    name="org.openpelo.beltstatusdump.action.STATE_UPDATE (used to send a broadcast)"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="NotificationPermission">
+        <entry
+            name="source"
+            boolean="true"/>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="array[speed_units(U)],id[fakeModeSwitch(U),pauseButton(U),overlayPermissionButton(U),startButton(U),sessionsText(U),metricsText(U),logText(U),diagnosticsText(U),exportButton(U),statusText(U),stopButton(U),toggleOverlayButton(U),speedUnitSpinner(U)],layout[activity_main(U)],string[export_csv(U),start(U),recent_sessions(U),metrics_placeholder(U),grant_overlay_permission(U),show_hide_overlay(U),pause(U),app_name(U),stop_save(U),fake_mode(U),raw_events(U),status_idle(U),diagnostics_placeholder(U)],style[Theme_BeltStatusDump(U),Theme_MaterialComponents_DayNight_NoActionBar(R)];e^16^1a^12^13^18^0^10^15^17^14^1b^f^11^19,1c^1d;;;"/>
+    </map>
+
+</incidents>
